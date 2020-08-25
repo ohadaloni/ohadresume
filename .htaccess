@@ -1,0 +1,11 @@
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+RewriteEngine on
+RewriteRule ^src/index.php - [L,NC]
+RewriteRule ^images/ - [L,NC]
+RewriteRule ^tmp/ - [L,NC]
+RewriteRule ^favicon.ico - [L,NC]
+RewriteRule ^js/ - [L,NC]
+RewriteRule ^css/ - [L,NC]
+RewriteRule ^robots.txt - [L,NC]
+RewriteRule ^(.*)$ src/index.php?PATH_INFO=$1&%{QUERY_STRING} [L]
