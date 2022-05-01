@@ -122,16 +122,8 @@ class OhadResume extends Mcontroller {
 	}
 	/*------------------------------------------------------------*/
 	/*------------------------------------------------------------*/
-	private function isAjax() {
-		$http_x_requested_with = @$_SERVER['HTTP_X_REQUESTED_WITH'];
-		$isAjax =
-			$http_x_requested_with &&
-			strtolower($http_x_requested_with) == "xmlhttprequest" ;
-		return($isAjax);
-	}
-	/*------------------------------*/
 	private function showMargins() {
-		if ( $this->isAjax() ) {
+		if ( Mutils::isAjax() ) {
 			return(false);
 		}
 		if( in_array($this->action, array(
@@ -287,7 +279,7 @@ class OhadResume extends Mcontroller {
 				array(
 					'name' => 'demo',
 					'title' => 'Demo',
-					'url' => "http://theora.com/Mdemo",
+					'url' => "http://mdemo.theora.com",
 					'target' => "mDemo",
 				),
 				array(
@@ -358,6 +350,12 @@ class OhadResume extends Mcontroller {
 					'title' => 'Articles',
 					'txt' => 'softwareEngines/articles',
 				),
+				array(
+					'name' => 'tictactoe',
+					'title' => 'Tic Tac Toe',
+					'url' => "http://mdemo.theora.com/tictactoe",
+					'target' => "tictactoe",
+				 ),
 				array(
 					'name' => 'wawi',
 					'title' => 'A Guitar Thing',
