@@ -4,6 +4,11 @@ class OhadResume extends Mcontroller {
 	/*------------------------------------------------------------*/
 	private $startTime;
 	/*------------------------------------------------------------*/
+	public function __construct($startTime) {
+		parent::__construct();
+		$this->startTime = $startTime;
+	}
+	/*------------------------------------------------------------*/
 	public function index() {
 		$this->showTxt("summary", "Summary", "CV");
 	}
@@ -99,7 +104,6 @@ class OhadResume extends Mcontroller {
 		ini_set('max_execution_time', 10);
 		ini_set("memory_limit", "5M");
 
-		$this->startTime = microtime(true);
 		$this->Mview->assign(array(
 			'controller' => $this->controller,
 			'action' => $this->action,
