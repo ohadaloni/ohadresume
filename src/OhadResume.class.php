@@ -2,11 +2,8 @@
 /*------------------------------------------------------------*/
 class OhadResume extends Mcontroller {
 	/*------------------------------------------------------------*/
-	private $startTime;
-	/*------------------------------------------------------------*/
-	public function __construct($startTime) {
+	public function __construct() {
 		parent::__construct();
-		$this->startTime = $startTime;
 	}
 	/*------------------------------------------------------------*/
 	public function index() {
@@ -120,7 +117,6 @@ class OhadResume extends Mcontroller {
 	protected function after() {
 		if ( ! $this->showMargins())
 			return;
-		$this->Mview->runningTime($this->startTime);
 		$this->Mview->showTpl("footer.tpl");
 		$this->Mview->showTpl("foot.tpl");
 	}
@@ -309,7 +305,7 @@ class OhadResume extends Mcontroller {
 				array(
 					'name' => 'corona',
 					'title' => 'Corona Tracker',
-					'url' => "http://corona.theora.com#viewSource",
+					'url' => "http://corona.theora.com/corona/viewSource",
 					'target' => "viewSource",
 				),
 				array(
@@ -349,6 +345,18 @@ class OhadResume extends Mcontroller {
 				),
 			 ),
 			 'Misc' => array(
+				array(
+					'name' => 'corona',
+					'title' => 'Corona Tracker',
+					'url' => "http://corona.theora.com",
+					'target' => "corona",
+				),
+				array(
+					'name' => 'medlog',
+					'title' => 'Medication Log',
+					'url' => "http://medlog.theora.com",
+					'target' => "medlog",
+				),
 				array(
 					'name' => 'articles',
 					'title' => 'Articles',
