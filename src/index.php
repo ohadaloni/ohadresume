@@ -4,6 +4,8 @@ error_reporting(E_ALL | E_NOTICE | E_STRICT );
 /*------------------------------------------------------------*/
 date_default_timezone_set("Asia/Jerusalem");
 /*------------------------------------------------------------*/
+$startTime = microtime(true);
+/*------------------------------------------------------------*/
 $ua = @$_SERVER['HTTP_USER_AGENT'];
 if (
 	! $ua
@@ -28,6 +30,6 @@ global $Mmodel;
 $Mview = new Mview;
 $Mmodel = new Mmodel;
 /*------------------------------------------------------------*/
-$ohadResume = new OhadResume;
+$ohadResume = new OhadResume($startTime);
 $ohadResume->control();
 /*------------------------------------------------------------*/
