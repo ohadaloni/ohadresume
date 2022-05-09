@@ -30,6 +30,7 @@ global $Mmodel;
 $Mview = new Mview;
 $Mmodel = new Mmodel;
 /*------------------------------------------------------------*/
-$ohadResume = new OhadResume($startTime);
+$ohadResume = new OhadResume;
+$ohadResume->setStartTime($startTime);
 $ohadResume->control();
 /*------------------------------------------------------------*/
