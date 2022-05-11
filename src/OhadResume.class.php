@@ -62,7 +62,7 @@ class OhadResume extends Mcontroller {
 				$txt .= "\n\n\n\n\nEXPERIENCE\n\n\n";
 			$rendered = $this->Mview->render($tpl);
 			$postfix = "\n\n\n";
-			$txt   .= "$titleTxt$rendered$postfix";
+			$txt .= "$titleTxt$rendered$postfix";
 		}
 		$txtFile = "../tmp/ohadResume.txt";
 		$pdfFile = "../tmp/ohadResume.pdf";
@@ -91,7 +91,7 @@ class OhadResume extends Mcontroller {
 			$tpl = "experience/$name.tpl";
 			$rendered = $this->Mview->render($tpl);
 			$postfix = "\n\n\n";
-			$txt   .= "$titleTxt$rendered$postfix";
+			$txt .= "$titleTxt$rendered$postfix";
 		}
 		$txt .= "</pre>\n";
 		$this->Mview->pushOutput($txt);
@@ -380,7 +380,7 @@ class OhadResume extends Mcontroller {
 	}
 	/*------------------------------------------------------------*/
 	private function errorLog($msg, $file = null, $line = null) {
-		$pfx = $line ? "$file:$line: " : "" ;
+		$pfx = $line ? "$file:$line: " : "";
 		error_log("$pfx$msg");
 	}
 	/*------------------------------------------------------------*/
