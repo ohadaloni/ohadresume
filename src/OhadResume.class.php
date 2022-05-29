@@ -138,6 +138,13 @@ class OhadResume extends Mcontroller {
 	/*------------------------------------------------------------*/
 	private function menu() {
 		$menu = array(
+			'Print' => array(
+				array(
+					'name' => 'print',
+					'title' => 'Print Version',
+					'func' => 'printVersion',
+				),
+			 ),
 			 'CV' => array(
 				array(
 					'name' => 'summary',
@@ -163,7 +170,6 @@ class OhadResume extends Mcontroller {
 				array(
 					'name' => 'printVersion',
 					'title' => 'Print Version',
-					/*	'target' => 'printVersion',	*/
 					'func' => 'printVersion',
 				),
 			 ),
